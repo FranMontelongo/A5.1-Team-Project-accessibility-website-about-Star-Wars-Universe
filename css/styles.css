@@ -1,221 +1,496 @@
-
 /* FRANCISCO JAVIER: estilos generales, diseño responsive y contraste.
    Mantener un diseño moderno, minimalista y accesible. */
 
-/* 1. Variables de colores */
+/* 1. Colores */
 :root {
-  --space-bg: #0b1020;
-  --space-panel: #151c2c;
-  --space-text: #ffffff;
-  --space-muted: #d1d5db;
-  --space-accent: #60a5fa;
+    --space-bg: #0b1020;
+    --space-panel: #151c2c;
+    --space-text: #ffffff;
+    --space-muted: #d1d5db;
+    --space-accent: #60a5fa;
+    --space-border: #394760;
 }
 
 /* 2. Configuración general */
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
-  font-size: 16px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
-  margin: 0;
-  background: var(--space-bg);
-  color: var(--space-text);
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: 1rem;
-  line-height: 1.6;
+    margin: 0;
+    background: var(--space-bg);
+    color: var(--space-text);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
 }
 
-/* 3. Tamaños de texto
-   Tailwind puede cambiar los estilos predeterminados de los encabezados. */
-body h1 {
-  max-width: 18ch;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  line-height: 1.2;
+.container {
+    max-width: 1140px;
 }
 
-body h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
+/* 3. Textos */
+h1, h2, h3 {
+    color: var(--space-text);
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-body h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.3;
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
-p,
-li,
-a,
-button,
-label {
-  font-size: 1rem;
+h2 {
+    margin-bottom: 20px;
+    font-size: clamp(2rem, 4vw, 2.8rem);
 }
 
-.navbar-brand {
-  font-size: 1.25rem;
-  font-weight: 600;
+h3 {
+    font-size: 1.4rem;
 }
 
-/* 4. Enlaces y accesibilidad */
+p {
+    color: var(--space-muted);
+}
+
+/* 4. Accesibilidad */
 a {
-  color: #ffe08a;
+    color: #ffe08a;
 }
 
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid #67e8f9;
-  outline-offset: 3px;
+    outline: 3px solid #67e8f9;
+    outline-offset: 3px;
 }
 
 .skip-link {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  z-index: 1000;
-  padding: .75rem;
-  background: #ffffff;
-  color: #111111;
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    z-index: 1000;
+    padding: 12px;
+    background: white;
+    color: black;
 }
 
 .skip-link:focus {
-  left: .5rem;
+    top: 10px;
 }
 
 /* 5. Cabecera y navegación */
 .site-header {
-  background: #111a2b;
-  border-bottom: 1px solid #34415b;
+    position: relative;
+    z-index: 10;
+    background: #111a2b;
+    border-bottom: 1px solid var(--space-border);
 }
 
-.navbar-brand,
-.nav-link {
-  color: var(--space-text) !important;
+.site-header .navbar {
+    min-height: 82px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.site-header .navbar-brand,
+.site-header .nav-link {
+    color: var(--space-text);
+}
+
+.site-header .nav-link {
+    margin-left: 8px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.site-header .nav-link:hover {
+    color: var(--space-accent);
+    background: #202c42;
 }
 
 .navbar-toggler {
-  background: #f5f7fb;
+    background: #f5f7fb;
 }
 
-/* 6. Portada */
+
+/* FRANCISCO JAVIER: tamaño del logo */
+.brand-image {
+    width: 120px;
+    height: 50px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Imagen del logo: cambia la ruta cuando añadas tu archivo */
+.site-logo {
+    display: block;
+    width: 145px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* 6. Portada principal con imagen de fondo */
 .hero {
-  min-height: 55vh;
+    display: flex;
+    align-items: center;
+    min-height: 580px;
+    padding: 90px 0;
+    background-color: #080d19;
+
+    /* Sustituye esta ruta por la imagen que vayas a utilizar.
+       La imagen se adapta al tamaño de la portada. */
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(5, 8, 18, 0.92),
+            rgba(5, 8, 18, 0.55)
+        ),
+        url("../assets/images/hero-star-wars.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 100%;
+}
+
+.hero-content h1 {
+    max-width: 750px;
+    margin: 20px 0;
+}
+
+.hero-content h1 span,
+.section-heading h2 span {
+    color: var(--space-accent);
 }
 
 .eyebrow {
-  color: var(--space-accent);
-  text-transform: uppercase;
-  letter-spacing: .12em;
-  font-weight: 600;
+    margin-bottom: 14px;
+    color: var(--space-accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.hero-media img {
-  display: block;
-  width: 100%;
-  max-height: 420px;
-  object-fit: cover;
-  border-radius: 1rem;
+.hero-description {
+    max-width: 600px;
+    color: #f1f5f9;
+    font-size: 1.15rem;
 }
 
-/* 7. Secciones */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.btn-gold {
+    padding: 12px 22px;
+    background: #f5c451;
+    border: 1px solid #f5c451;
+    border-radius: 8px;
+    color: #111827;
+    font-weight: 700;
+}
+
+.btn-gold:hover {
+    background: #ffda7c;
+    color: #111827;
+}
+
+.btn-outline-gold {
+    padding: 12px 22px;
+    border: 1px solid #f5c451;
+    border-radius: 8px;
+    color: #ffe08a;
+}
+
+.btn-outline-gold:hover {
+    background: #f5c451;
+    color: #111827;
+}
+
+.hero-caption {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 55px;
+    color: #d1d5db;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+}
+
+.caption-line {
+    width: 45px;
+    height: 2px;
+    background: var(--space-accent);
+}
+
+/* 7. Separación de las secciones */
 .section-space {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-figcaption,
-.small,
-.muted {
-  color: var(--space-muted);
+.section-heading {
+    max-width: 720px;
+    margin: 0 auto 55px;
+    text-align: center;
 }
 
-/* 8. Tarjetas informativas */
+.section-heading > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#universo {
+    border-bottom: 1px solid #273249;
+}
+
+.character-section {
+    background: #101625;
+    border-top: 1px solid #273249;
+    border-bottom: 1px solid #273249;
+}
+
+.character-section .section-space {
+    padding-top: 110px;
+    padding-bottom: 110px;
+}
+
+.accessibility-section {
+    background: #101625;
+    border-top: 1px solid #273249;
+}
+
+/* 8. Tarjetas informativas
+   Mantener el estilo de las tarjetas anterior. */
 .info-card,
 .character-card {
-  background: var(--space-panel);
-  border: 1px solid #394760;
-  border-radius: 1rem;
-  padding: 1.25rem;
+    padding: 1.25rem;
+    background: var(--space-panel);
+    border: 1px solid var(--space-border);
+    border-radius: 1rem;
 }
 
-/* 9. Vídeo y audio */
-.media-frame {
-  max-height: 360px;
-  background: #000000;
-  border-radius: .75rem;
+.info-card {
+    height: 100%;
+    padding: 28px;
+    transition: border-color 0.2s;
 }
 
-/* 10. Canvas */
-#starCanvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  background: #050914;
-  border: 1px solid #394760;
-  border-radius: .75rem;
+.info-card:hover {
+    border-color: var(--space-accent);
 }
 
-/* 11. Buscador de personajes React */
+.card-number {
+    color: var(--space-accent);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card-symbol {
+    margin: 20px 0;
+    color: var(--space-accent);
+    font-size: 2rem;
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+    color: var(--space-accent);
+}
+
+.info-card p {
+    margin-bottom: 0;
+}
+
+/* 9. Personajes de React */
+.character-panel {
+    padding: 30px;
+    background: #0b1020;
+    border: 1px solid var(--space-border);
+    border-radius: 18px;
+}
+
+#character-app {
+    min-height: 150px;
+}
+
 #character-app input,
 #character-app select {
-  color: #111827;
-  background: #ffffff;
-  border: 1px solid #667085;
-  border-radius: .4rem;
-  padding: .55rem;
-  font-size: 1rem;
+    padding: 10px;
+    color: #111827;
+    background: #ffffff;
+    border: 1px solid #667085;
+    border-radius: 7px;
 }
 
-/* 12. Pie de página */
-footer {
-  border-top: 1px solid #34415b;
+#character-app label {
+    margin-bottom: 8px;
+    color: var(--space-text);
 }
 
-/* 13. Adaptación a móviles */
-@media (max-width: 576px) {
-  body h1 {
-    font-size: 2.5rem;
-  }
-
-  body h2 {
-    font-size: 1.75rem;
-  }
-
-  body h3 {
-    font-size: 1.3rem;
-  }
-
-  .hero {
-    min-height: auto;
-  }
-
-  .section-space {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
+.character-card {
+    height: 100%;
+    padding: 18px;
+    transition: border-color 0.2s;
 }
 
-/* 14. Respetar la preferencia de movimiento reducido */
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+.character-card:hover {
+    border-color: var(--space-accent);
+}
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    transition-duration: .01ms !important;
-  }
+.character-card h3 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.character-image {
+    display: block;
+    width: 100%;
+    height: 260px;
+    margin-bottom: 18px;
+    background: #0b1020;
+    border-radius: 0.75rem;
+    object-fit: contain;
+}
+
+.character-card p {
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+/* 10. Vídeo y audio */
+.media-card {
+    height: 100%;
+    padding: 30px;
+    background: var(--space-panel);
+    border: 1px solid var(--space-border);
+    border-radius: 1rem;
+}
+
+.media-icon {
+    margin-bottom: 18px;
+    color: var(--space-accent);
+    font-size: 2rem;
+}
+
+.media-card h3 {
+    margin-bottom: 15px;
+}
+
+.media-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 190px;
+    margin-top: 25px;
+    padding: 20px;
+    background: #0b1020;
+    border: 1px dashed #667085;
+    border-radius: 0.75rem;
+    color: var(--space-muted);
+    text-align: center;
+}
+
+/* 11. Mapa estelar */
+.map-panel {
+    padding: 30px;
+    background: var(--space-panel);
+    border: 1px solid var(--space-border);
+    border-radius: 1rem;
+}
+
+.map-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.map-heading h3 {
+    margin-bottom: 0;
+}
+
+#starCanvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #050914;
+    border: 1px solid var(--space-border);
+    border-radius: 0.75rem;
+}
+
+#canvasDescription {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* 12. Accesibilidad y licencias */
+.project-list {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 30px 30px 30px 55px;
+    background: var(--space-panel);
+    border: 1px solid var(--space-border);
+    border-radius: 1rem;
+}
+
+.project-list li {
+    margin-bottom: 14px;
+    padding-left: 5px;
+    color: var(--space-muted);
+}
+
+.project-list li:last-child {
+    margin-bottom: 0;
+}
+
+.disclaimer {
+    max-width: 850px;
+    margin: 30px auto 0;
+    font-size: 0.9rem;
+}
+
+/* 13. Pie de página */
+.site-footer {
+    padding: 35px 0;
+    background: #080c16;
+    border-top: 1px solid var(--space-border);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-footer p {
+    margin-bottom: 0;
+}
+
+.back-top {
+    white-space: nowrap;
 }
 
 /* HUGO EXPÓSITO:
@@ -223,3 +498,74 @@ footer {
 
 /* RICARDO LERMA:
    comprobar el canvas, las tarjetas y que no haya scroll horizontal. */
+
+/* 14. Adaptación a móviles */
+@media (max-width: 768px) {
+    .site-header .navbar {
+        min-height: 70px;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 65px 0;
+        background-position: center;
+    }
+
+    .hero-caption {
+        margin-top: 35px;
+    }
+
+    .section-space,
+    .character-section .section-space {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .character-panel,
+    .map-panel,
+    .media-card {
+        padding: 20px;
+    }
+
+    .map-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .site-logo {
+        width: 120px;
+        height: 42px;
+    }
+}
+
+/* 15. Respetar la preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
