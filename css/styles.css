@@ -1,0 +1,163 @@
+/* FRANCISCO JAVIER: responsable de la base visual, diseño responsive y contraste.
+   Usa Figma como referencia; reemplaza los colores cuando estén acordados por el grupo. */
+:root {
+  --space-bg: #090d18;
+  --space-panel: #151d2e;
+  --space-text: #f5f7fb;
+  --space-muted: #c9d2e3;
+  --space-accent: #ffd166;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--space-bg);
+  color: var(--space-text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #ffe08a;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #67e8f9;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 1000;
+  background: white;
+  color: black;
+  padding: .75rem;
+}
+
+.skip-link:focus {
+  left: .5rem;
+}
+
+.site-header {
+  background: #111a2b;
+  border-bottom: 1px solid #34415b;
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--space-text) !important;
+}
+
+.navbar-toggler {
+  background: #f5f7fb;
+}
+
+.hero {
+  min-height: 55vh;
+}
+
+.eyebrow {
+  color: var(--space-accent);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  max-width: 18ch;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+}
+
+.section-space {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.hero-media img {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+figcaption,
+.small,
+.muted {
+  color: var(--space-muted);
+}
+
+.info-card {
+  background: var(--space-panel);
+  border: 1px solid #394760;
+  border-radius: 1rem;
+  padding: 1.25rem;
+}
+
+.media-frame {
+  max-height: 360px;
+  background: #000;
+  border-radius: .75rem;
+}
+
+#starCanvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #050914;
+  border: 1px solid #394760;
+  border-radius: .75rem;
+}
+
+#character-app input,
+#character-app select {
+  color: #111827;
+  background: #fff;
+  border: 1px solid #667085;
+  border-radius: .4rem;
+  padding: .55rem;
+}
+
+.character-card {
+  background: var(--space-panel);
+  border: 1px solid #394760;
+  padding: 1rem;
+  border-radius: .75rem;
+}
+
+footer {
+  border-top: 1px solid #34415b;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+
+/* HUGO: prueba el contraste de todos los estados hover/focus y revisa la navegación en 320 px de ancho. */
+/* RICARDO LERMA: comprueba que las tarjetas, canvas y reproductores no causan scroll horizontal. */

@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Proyecto educativo accesible sobre el universo Star Wars.">
+  <title>Galaxia Star Wars | Proyecto DAW</title>
+
+  <!-- FRANCISCO JAVIER: revisa que ambas librerías se cargan y documenta por qué usamos Bootstrap y Tailwind.
+       Nota: Bootstrap y Tailwind pueden tener conflictos de estilos; prueba la página y limita clases cuando sea necesario. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg container" aria-label="Navegación principal">
+      <a class="navbar-brand" href="#inicio">Galaxia Star Wars</a>
+      <!-- HUGO: comprueba el menú en móvil y asegúrate de que puede usarse con teclado. -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+        aria-label="Abrir o cerrar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#universo">Universo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#personajes">Personajes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#multimedia">Multimedia</a></li>
+          <li class="nav-item"><a class="nav-link" href="#accesibilidad">Accesibilidad</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section id="inicio" class="hero container py-5">
+      <p class="eyebrow">Una galaxia para todos</p>
+      <h1>Explora el universo Star Wars</h1>
+      <p class="lead">Un recorrido por personajes, planetas e historias, diseñado con la accesibilidad en mente.</p>
+      <!-- FRANCISCO JAVIER: añade una imagen optimizada y real. El alt debe describir lo importante de la imagen,
+           no empezar con "imagen de". Si es decorativa, usa alt="". Comprueba los derechos/licencia. -->
+      <figure class="hero-media">
+        <img src="assets/images/placeholder-galaxy.jpg"
+          alt="DESCRIBIR AQUÍ LA IMAGEN DE LA GALAXIA CUANDO SE AÑADA EL ARCHIVO REAL"
+          class="img-fluid" width="1200" height="600">
+        <figcaption>Imagen pendiente de sustituir por un recurso con licencia compatible.</figcaption>
+      </figure>
+      <div class="d-flex flex-wrap gap-2 mt-3">
+        <a class="btn btn-warning" href="#personajes">Conocer personajes</a>
+        <button class="btn btn-outline-light" id="readPageButton" type="button">Leer página en voz alta</button>
+      </div>
+      <p id="readStatus" class="visually-hidden" aria-live="polite"></p>
+    </section>
+
+    <section id="universo" class="container section-space">
+      <h2>El universo</h2>
+      <p>Describe aquí la galaxia, sus planetas, las facciones y el contexto de la saga. Divide el texto en bloques cortos.</p>
+      <!-- RICARDO LERMA: crea al menos tres tarjetas de planetas o facciones. Usa encabezados ordenados,
+           texto breve, imágenes optimizadas y texto alternativo significativo. -->
+      <div class="row g-3">
+        <div class="col-md-4">
+          <article class="info-card h-100">
+            <h3>Planeta pendiente</h3>
+            <p>Escribe una descripción breve y fiable de este lugar.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="info-card h-100">
+            <h3>Facción pendiente</h3>
+            <p>Explica quiénes la forman y qué papel tiene en la historia.</p>
+          </article>
+        </div>
+        <div class="col-md-4">
+          <article class="info-card h-100">
+            <h3>Época pendiente</h3>
+            <p>Resume una época de la cronología sin saturar la página de texto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="personajes" class="container section-space">
+      <h2>Personajes</h2>
+      <p>Busca un personaje o filtra la lista por bando.</p>
+      <!-- FRANCISCO JAVIER: este componente React se monta desde js/react-app.js.
+           Completa la lista, añade estados y comprueba que el resultado se anuncia con aria-live. -->
+      <div id="character-app">
+        <p>El listado interactivo se cargará aquí. Si no carga, revisa la consola del navegador.</p>
+      </div>
+    </section>
+
+    <section id="multimedia" class="container section-space">
+      <h2>Multimedia</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h3>Vídeo</h3>
+          <!-- HUGO: cambia el archivo de ejemplo por un vídeo propio o con licencia adecuada.
+               Incluye subtítulos VTT con track kind="captions" y una transcripción accesible debajo.
+               No uses reproducción automática con sonido. -->
+          <video class="w-100 media-frame" controls preload="metadata"
+            aria-label="Vídeo introductorio sobre Star Wars">
+            <source src="assets/video/intro-placeholder.mp4" type="video/mp4">
+            <track kind="captions" src="assets/video/subtitulos-es.vtt" srclang="es" label="Español">
+            Tu navegador no puede reproducir este vídeo. Lee la transcripción que se añadirá debajo.
+          </video>
+          <p><strong>Transcripción:</strong> HUGO, añade aquí el contenido hablado del vídeo y los sonidos relevantes.</p>
+        </div>
+        <div class="col-lg-6">
+          <h3>Sonido</h3>
+          <!-- HUGO: usa solo audio que tengas permiso para publicar. Añade una descripción/transcripción
+               y comprueba los controles con teclado. No reproduzcas audio automáticamente. -->
+          <audio class="w-100" controls preload="none" aria-label="Audio relacionado con el universo Star Wars">
+            <source src="assets/audio/audio-placeholder.mp3" type="audio/mpeg">
+            Tu navegador no puede reproducir este audio.
+          </audio>
+          <p>Descripción del audio pendiente: indica qué se escucha y si hay voz, música o efectos.</p>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <h3>Mapa estelar interactivo</h3>
+        <!-- RICARDO LERMA: dibuja en el canvas con JavaScript. No pongas información esencial solo en el dibujo:
+             incluye también una descripción textual equivalente y un nombre accesible. -->
+        <canvas id="starCanvas" width="800" height="300" role="img"
+          aria-label="Mapa estelar decorativo. La descripción textual se encuentra a continuación.">
+          Mapa estelar: añade aquí una descripción textual de los planetas y conexiones que se mostrarán.
+        </canvas>
+        <p id="canvasDescription">Descripción del mapa pendiente: enumera los planetas representados y sus conexiones.</p>
+        <button class="btn btn-outline-light mt-2" id="redrawCanvas" type="button">Redibujar mapa</button>
+      </div>
+    </section>
+
+    <section id="accesibilidad" class="container section-space">
+      <h2>Accesibilidad y licencias</h2>
+      <!-- RICARDO LERMA: después de hacer pruebas, resume los resultados iniciales y finales.
+           No afirmes que el sitio está certificado si no existe una certificación real. -->
+      <p>Objetivo: seguir las pautas WCAG 2.2 nivel AA y publicar una declaración de accesibilidad honesta.</p>
+      <ul>
+        <li>Declaración de accesibilidad: pendiente de completar tras las pruebas.</li>
+        <li>Licencias de imágenes, vídeo, audio y tipografías: pendiente de documentar.</li>
+        <li>Informe automático antes de corregir: pendiente.</li>
+        <li>Informe automático después de corregir: pendiente.</li>
+      </ul>
+      <p class="small">Proyecto educativo no oficial. Star Wars y sus elementos pertenecen a sus respectivos titulares. No implica afiliación ni respaldo oficial.</p>
+    </section>
+  </main>
+
+  <footer class="container py-4">
+    <p>Proyecto de clase — Francisco Javier, Hugo Expósito y Ricardo Lerma.</p>
+    <a href="#contenido">Volver al principio</a>
+  </footer>
+
+  <!-- Bootstrap: comportamiento del menú móvil. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery se usa en js/app.js para un elemento interactivo adicional. -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <!-- React para el buscador/listado de personajes. -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="js/app.js"></script>
+  <script type="text/babel" src="js/react-app.js"></script>
+</body>
+</html>
