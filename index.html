@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +13,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
@@ -19,9 +21,8 @@
     <nav class="navbar navbar-expand-lg container" aria-label="Navegación principal">
       <a class="navbar-brand" href="#inicio">Galaxia Star Wars</a>
       <!-- HUGO: comprueba el menú en móvil y asegúrate de que puede usarse con teclado. -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
-        aria-label="Abrir o cerrar navegación">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Abrir o cerrar navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNav">
@@ -44,8 +45,8 @@
            no empezar con "imagen de". Si es decorativa, usa alt="". Comprueba los derechos/licencia. -->
       <figure class="hero-media">
         <img src="assets/images/placeholder-galaxy.jpg"
-          alt="DESCRIBIR AQUÍ LA IMAGEN DE LA GALAXIA CUANDO SE AÑADA EL ARCHIVO REAL"
-          class="img-fluid" width="1200" height="600">
+          alt="DESCRIBIR AQUÍ LA IMAGEN DE LA GALAXIA CUANDO SE AÑADA EL ARCHIVO REAL" class="img-fluid" width="1200"
+          height="600">
         <figcaption>Imagen pendiente de sustituir por un recurso con licencia compatible.</figcaption>
       </figure>
       <div class="d-flex flex-wrap gap-2 mt-3">
@@ -57,7 +58,8 @@
 
     <section id="universo" class="container section-space">
       <h2>El universo</h2>
-      <p>Describe aquí la galaxia, sus planetas, las facciones y el contexto de la saga. Divide el texto en bloques cortos.</p>
+      <p>Describe aquí la galaxia, sus planetas, las facciones y el contexto de la saga. Divide el texto en bloques
+        cortos.</p>
       <!-- RICARDO LERMA: crea al menos tres tarjetas de planetas o facciones. Usa encabezados ordenados,
            texto breve, imágenes optimizadas y texto alternativo significativo. -->
       <div class="row g-3">
@@ -100,13 +102,13 @@
           <!-- HUGO: cambia el archivo de ejemplo por un vídeo propio o con licencia adecuada.
                Incluye subtítulos VTT con track kind="captions" y una transcripción accesible debajo.
                No uses reproducción automática con sonido. -->
-          <video class="w-100 media-frame" controls preload="metadata"
-            aria-label="Vídeo introductorio sobre Star Wars">
+          <video class="w-100 media-frame" controls preload="metadata" aria-label="Vídeo introductorio sobre Star Wars">
             <source src="assets/video/intro-placeholder.mp4" type="video/mp4">
             <track kind="captions" src="assets/video/subtitulos-es.vtt" srclang="es" label="Español">
             Tu navegador no puede reproducir este vídeo. Lee la transcripción que se añadirá debajo.
           </video>
-          <p><strong>Transcripción:</strong> HUGO, añade aquí el contenido hablado del vídeo y los sonidos relevantes.</p>
+          <p><strong>Transcripción:</strong> HUGO, añade aquí el contenido hablado del vídeo y los sonidos relevantes.
+          </p>
         </div>
         <div class="col-lg-6">
           <h3>Sonido</h3>
@@ -128,7 +130,8 @@
           aria-label="Mapa estelar decorativo. La descripción textual se encuentra a continuación.">
           Mapa estelar: añade aquí una descripción textual de los planetas y conexiones que se mostrarán.
         </canvas>
-        <p id="canvasDescription">Descripción del mapa pendiente: enumera los planetas representados y sus conexiones.</p>
+        <p id="canvasDescription">Descripción del mapa pendiente: enumera los planetas representados y sus conexiones.
+        </p>
         <button class="btn btn-outline-light mt-2" id="redrawCanvas" type="button">Redibujar mapa</button>
       </div>
     </section>
@@ -144,7 +147,8 @@
         <li>Informe automático antes de corregir: pendiente.</li>
         <li>Informe automático después de corregir: pendiente.</li>
       </ul>
-      <p class="small">Proyecto educativo no oficial. Star Wars y sus elementos pertenecen a sus respectivos titulares. No implica afiliación ni respaldo oficial.</p>
+      <p class="small">Proyecto educativo no oficial. Star Wars y sus elementos pertenecen a sus respectivos titulares.
+        No implica afiliación ni respaldo oficial.</p>
     </section>
   </main>
 
@@ -164,4 +168,5 @@
   <script src="js/app.js"></script>
   <script type="text/babel" src="js/react-app.js"></script>
 </body>
+
 </html>
