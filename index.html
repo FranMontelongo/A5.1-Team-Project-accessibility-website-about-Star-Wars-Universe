@@ -35,6 +35,7 @@
           <li class="nav-item"><a class="nav-link" href="#universo">Universo</a></li>
           <li class="nav-item"><a class="nav-link" href="#personajes">Personajes</a></li>
           <li class="nav-item"><a class="nav-link" href="#carrusel">Carrusel</a></li>
+           <li class="nav-item"><a class="nav-link" href="#mapa">Mapa</a></li>
           <li class="nav-item"><a class="nav-link" href="./juegos.html">Juegos</a></li>
         </ul>
       </div>
@@ -86,8 +87,9 @@
           <article class="info-card">
             <span class="card-number">01 / PLANETAS</span>
             <div class="card-symbol" aria-hidden="true">◎</div>
-            <h3>Planeta pendiente</h3>
-            <p>Escribe una descripción breve y fiable de este lugar.</p>
+            <h3>Tatooine y Coruscant</h3>
+            <p>Tatooine es un mundo desértico de dos soles clave para los Skywalker, mientras que Coruscant es la
+              ecumenópolis capital de la galaxia.</p>
           </article>
         </div>
 
@@ -95,8 +97,9 @@
           <article class="info-card">
             <span class="card-number">02 / FACCIONES</span>
             <div class="card-symbol" aria-hidden="true">⚔</div>
-            <h3>Facción pendiente</h3>
-            <p>Explica quiénes la forman y qué papel tienen en la historia.</p>
+            <h3>Rebeldes e Imperio</h3>
+            <p>La Alianza Rebelde lucha por restaurar la libertad democrática frente al opresor régimen autoritario del
+              Imperio Galáctico.</p>
           </article>
         </div>
 
@@ -104,8 +107,9 @@
           <article class="info-card">
             <span class="card-number">03 / CRONOLOGÍA</span>
             <div class="card-symbol" aria-hidden="true">◷</div>
-            <h3>Época pendiente</h3>
-            <p>Resume una época de la cronología.</p>
+            <h3>La Guerra Civil Galáctica</h3>
+            <p>Época de conflicto definitivo entre la tiranía imperial y las fuerzas de la resistencia que culmina con
+              la caída del emperador.</p>
           </article>
         </div>
 
@@ -131,9 +135,51 @@
       </div>
     </section>
 
-    <!-- MAPA ESTELAR -->
-    <section class="container section-space">
-      <div class="map-panel">
+    <!-- FRANCISCO JAVIER: sección multimedia -->
+    <section id="multimedia" class="container section-space">
+
+      <div class="section-heading">
+        <p class="eyebrow">Imagen y sonido</p>
+        <h2>Explora la multimedia</h2>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-lg-6">
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true">▶</div>
+            <h3>Vídeo</h3>
+            <p>
+              Vídeo pendiente de añadir. Cuando esté disponible,
+              incluye subtítulos y una transcripción accesible.
+            </p>
+            <div class="media-placeholder">
+              VÍDEO PENDIENTE DE AÑADIR
+            </div>
+          </article>
+        </div>
+
+        <div class="col-lg-6">
+          <article class="media-card">
+            <div class="media-icon" aria-hidden="true">♫</div>
+            <h3>Sonido</h3>
+            <p>
+              Audio pendiente de añadir. Incluye una descripción
+              o transcripción cuando esté disponible.
+            </p>
+            <div class="media-placeholder">
+              AUDIO PENDIENTE DE AÑADIR
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+      <!-- RICARDO LERMA: dibuja en el canvas con JavaScript.
+           No pongas información esencial solo en el dibujo:
+           incluye también una descripción textual equivalente
+           y un nombre accesible. -->
+      <div id="mapa" class="map-panel mt-5">
 
         <div class="map-heading">
           <div>
@@ -154,6 +200,87 @@
         <p id="canvasDescription" class="map-description">
           Mapa con los planetas Tatooine, Naboo y Hoth conectados.
         </p>
+
+        <!-- RICARDO LERMA: Modales accesibles para los sistemas del mapa estelar -->
+        <div class="modal fade" id="modalTatooine" tabindex="-1" aria-labelledby="modalTatooineLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-warning">
+              <div class="modal-header border-secondary">
+                <h5 class="modal-title text-warning" id="modalTatooineLabel">Tatooine (Órbita)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Cerrar modal y volver al mapa"></button>
+              </div>
+              <div class="modal-body text-center">
+                <div class="bg-black rounded mb-3 p-1 border border-secondary"
+                  style="max-height: 260px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                  <img
+                    src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=800&q=80"
+                    class="img-fluid rounded" style="max-height: 250px; width: auto; object-fit: contain;"
+                    alt="Vista orbital del planeta desértico Tatooine en el espacio">
+                </div>
+                <p class="mb-0">Mundo desértico de dos soles ubicado en el Borde Exterior. Es la cuna de Anakin y Luke
+                  Skywalker, y un punto clave en la historia de la galaxia.</p>
+              </div>
+              <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-warning" data-bs-dismiss="modal">Volver al mapa</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalCoruscant" tabindex="-1" aria-labelledby="modalCoruscantLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-info">
+              <div class="modal-header border-secondary">
+                <h5 class="modal-title text-info" id="modalCoruscantLabel">Coruscant (Órbita)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Cerrar modal y volver al mapa"></button>
+              </div>
+              <div class="modal-body text-center">
+                <div class="bg-black rounded mb-3 p-1 border border-secondary"
+                  style="max-height: 260px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                  <img
+                    src="https://static.wikia.nocookie.net/esstarwars/images/1/16/Coruscant-EotE.jpg/revision/latest/scale-to-width-down/1200?cb=20221030195452"
+                    class="img-fluid rounded" style="max-height: 250px; width: auto; object-fit: contain;"
+                    alt="Vista orbital oficial de la ciudad-planeta de Coruscant">
+                </div>
+                <p class="mb-0">Ciudad-planeta ecumenópolis y centro político de la galaxia. Sede del Senado Galáctico y
+                  del antiguo Templo Jedi.</p>
+              </div>
+              <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-info" data-bs-dismiss="modal">Volver al mapa</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="modalEndor" tabindex="-1" aria-labelledby="modalEndorLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content bg-dark text-white border-success">
+              <div class="modal-header border-secondary">
+                <h5 class="modal-title text-success" id="modalEndorLabel">Endor (Órbita)</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                  aria-label="Cerrar modal y volver al mapa"></button>
+              </div>
+              <div class="modal-body text-center">
+                <div class="bg-black rounded mb-3 p-1 border border-secondary"
+                  style="max-height: 260px; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                  <img
+                    src="https://static.wikia.nocookie.net/esstarwars/images/5/50/Endor_FFGRebellion.png/revision/latest?cb=20170629163352"
+                    class="img-fluid rounded" style="max-height: 250px; width: auto; object-fit: contain;"
+                    alt="Vista orbital oficial de la luna boscosa de Endor">
+                </div>
+                <p class="mb-0">Luna boscosa hogar de la especie Ewok. Escenario de la batalla decisiva donde se
+                  destruyó la segunda Estrella de la Muerte.</p>
+              </div>
+              <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Volver al mapa</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </section>
@@ -291,7 +418,7 @@
   <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>Proyecto de clase — Francisco Javier, Hugo Expósito y Ricardo Lerma.</p>
+      <p>Copyright (c) [2026] [Integrantes:HUGO EXPOSITO,FRANCISCO MONTELONGO,RICARDO LERMA - Proyecto Star Wars].</p>
       <a class="back-top" href="#inicio">Volver al principio ↑</a>
     </div>
   </footer>
