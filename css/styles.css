@@ -1,7 +1,4 @@
-/* FRANCISCO JAVIER: estilos generales, diseño responsive y contraste.
-   Mantener un diseño moderno, minimalista y accesible. */
-
-/* 1. Colores */
+/* 1. Colores y configuración general */
 :root {
     --space-bg: #0b1020;
     --space-panel: #151c2c;
@@ -11,7 +8,6 @@
     --space-border: #394760;
 }
 
-/* 2. Configuración general */
 * {
     box-sizing: border-box;
 }
@@ -34,646 +30,6 @@ body {
     max-width: 1140px;
 }
 
-/* 3. Textos */
-h1, h2, h3 {
-    color: var(--space-text);
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-h1 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-}
-
-h2 {
-    margin-bottom: 20px;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-}
-
-h3 {
-    font-size: 1.4rem;
-}
-
-p {
-    color: var(--space-muted);
-}
-
-/* 4. Accesibilidad */
-a {
-    color: #ffe08a;
-}
-
-a:focus-visible,
-button:focus-visible,
-input:focus-visible,
-select:focus-visible {
-    outline: 3px solid #67e8f9;
-    outline-offset: 3px;
-}
-
-.skip-link {
-    position: absolute;
-    top: -100px;
-    left: 10px;
-    z-index: 1000;
-    padding: 12px;
-    background: white;
-    color: black;
-}
-
-.skip-link:focus {
-    top: 10px;
-}
-
-/* 5. Cabecera y navegación */
-.site-header {
-    position: relative;
-    z-index: 10;
-    background: #111a2b;
-    border-bottom: 1px solid var(--space-border);
-}
-
-.site-header .navbar {
-    min-height: 82px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-}
-
-.site-header .navbar-brand,
-.site-header .nav-link {
-    color: var(--space-text);
-}
-
-.site-header .nav-link {
-    margin-left: 8px;
-    padding: 10px 14px;
-    border-radius: 8px;
-    transition: background 0.2s, color 0.2s;
-}
-
-.site-header .nav-link:hover {
-    color: var(--space-accent);
-    background: #202c42;
-}
-
-.navbar-toggler {
-    background: #f5f7fb;
-}
-
-
-/* FRANCISCO JAVIER: tamaño del logo */
-.brand-image {
-    width: 120px;
-    height: 50px;
-    object-fit: contain;
-    display: block;
-}
-
-/* Imagen del logo: cambia la ruta cuando añadas tu archivo */
-.site-logo {
-    display: block;
-    width: 145px;
-    height: 48px;
-    object-fit: contain;
-}
-
-/* 6. Portada principal con imagen de fondo */
-.hero {
-    display: flex;
-    align-items: center;
-    min-height: 580px;
-    padding: 90px 0;
-    background-color: #080d19;
-
-    /* Sustituye esta ruta por la imagen que vayas a utilizar.
-       La imagen se adapta al tamaño de la portada. */
-    background-image:
-        linear-gradient(
-            90deg,
-            rgba(5, 8, 18, 0.92),
-            rgba(5, 8, 18, 0.55)
-        ),
-        url("../assets/images/hero-star-wars.jpg");
-
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.hero-content {
-    width: 100%;
-}
-
-.hero-content h1 {
-    max-width: 750px;
-    margin: 20px 0;
-}
-
-.hero-content h1 span,
-.section-heading h2 span {
-    color: var(--space-accent);
-}
-
-.eyebrow {
-    margin-bottom: 14px;
-    color: var(--space-accent);
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.hero-description {
-    max-width: 600px;
-    color: #f1f5f9;
-    font-size: 1.15rem;
-}
-
-.hero-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 30px;
-}
-
-.btn-gold {
-    padding: 12px 22px;
-    background: #f5c451;
-    border: 1px solid #f5c451;
-    border-radius: 8px;
-    color: #111827;
-    font-weight: 700;
-}
-
-.btn-gold:hover {
-    background: #ffda7c;
-    color: #111827;
-}
-
-.btn-outline-gold {
-    padding: 12px 22px;
-    border: 1px solid #f5c451;
-    border-radius: 8px;
-    color: #ffe08a;
-}
-
-.btn-outline-gold:hover {
-    background: #f5c451;
-    color: #111827;
-}
-
-.hero-caption {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-top: 55px;
-    color: #d1d5db;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-}
-
-.caption-line {
-    width: 45px;
-    height: 2px;
-    background: var(--space-accent);
-}
-
-/* 7. Separación de las secciones */
-.section-space {
-    padding-top: 100px;
-    padding-bottom: 100px;
-}
-
-.section-heading {
-    max-width: 720px;
-    margin: 0 auto 55px;
-    text-align: center;
-}
-
-.section-heading > p:last-child {
-    max-width: 650px;
-    margin: 0 auto;
-}
-
-#universo {
-    border-bottom: 1px solid #273249;
-}
-
-.character-section {
-    background: #101625;
-    border-top: 1px solid #273249;
-    border-bottom: 1px solid #273249;
-}
-
-.character-section .section-space {
-    padding-top: 110px;
-    padding-bottom: 110px;
-}
-
-.accessibility-section {
-    background: #101625;
-    border-top: 1px solid #273249;
-}
-
-/* 8. Tarjetas informativas
-   Mantener el estilo de las tarjetas anterior. */
-.info-card,
-.character-card {
-    padding: 1.25rem;
-    background: var(--space-panel);
-    border: 1px solid var(--space-border);
-    border-radius: 1rem;
-}
-
-.info-card {
-    height: 100%;
-    padding: 28px;
-    transition: border-color 0.2s;
-}
-
-.info-card:hover {
-    border-color: var(--space-accent);
-}
-
-.card-number {
-    color: var(--space-accent);
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.card-symbol {
-    margin: 20px 0;
-    color: var(--space-accent);
-    font-size: 2rem;
-}
-
-.info-card h3 {
-    margin-bottom: 15px;
-    color: var(--space-accent);
-}
-
-.info-card p {
-    margin-bottom: 0;
-}
-
-/* 9. Personajes de React */
-.character-panel {
-    padding: 30px;
-    background: #0b1020;
-    border: 1px solid var(--space-border);
-    border-radius: 18px;
-}
-
-#character-app {
-    min-height: 150px;
-}
-
-#character-app input,
-#character-app select {
-    padding: 10px;
-    color: #111827;
-    background: #ffffff;
-    border: 1px solid #667085;
-    border-radius: 7px;
-}
-
-#character-app label {
-    margin-bottom: 8px;
-    color: var(--space-text);
-}
-
-.character-card {
-    height: 100%;
-    padding: 18px;
-    transition: border-color 0.2s;
-}
-
-.character-card:hover {
-    border-color: var(--space-accent);
-}
-
-.character-card h3 {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.character-image {
-    display: block;
-    width: 100%;
-    height: 260px;
-    margin-bottom: 18px;
-    background: #0b1020;
-    border-radius: 0.75rem;
-    object-fit: contain;
-}
-
-.character-card p {
-    margin-bottom: 10px;
-    overflow-wrap: anywhere;
-}
-
-/* 10. Vídeo y audio */
-.media-card {
-    height: 100%;
-    padding: 30px;
-    background: var(--space-panel);
-    border: 1px solid var(--space-border);
-    border-radius: 1rem;
-}
-
-.media-icon {
-    margin-bottom: 18px;
-    color: var(--space-accent);
-    font-size: 2rem;
-}
-
-.media-card h3 {
-    margin-bottom: 15px;
-}
-
-.media-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 190px;
-    margin-top: 25px;
-    padding: 20px;
-    background: #0b1020;
-    border: 1px dashed #667085;
-    border-radius: 0.75rem;
-    color: var(--space-muted);
-    text-align: center;
-}
-
-/* 11. Mapa estelar */
-.map-panel {
-    padding: 30px;
-    background: var(--space-panel);
-    border: 1px solid var(--space-border);
-    border-radius: 1rem;
-}
-
-.map-heading {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 25px;
-}
-
-.map-heading h3 {
-    margin-bottom: 0;
-}
-
-#starCanvas {
-    display: block;
-    width: 100%;
-    height: auto;
-    background: #050914;
-    border: 1px solid var(--space-border);
-    border-radius: 0.75rem;
-}
-
-#canvasDescription {
-    margin-top: 20px;
-    margin-bottom: 0;
-}
-
-/* 12. Accesibilidad y licencias */
-.project-list {
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 30px 30px 30px 55px;
-    background: var(--space-panel);
-    border: 1px solid var(--space-border);
-    border-radius: 1rem;
-}
-
-.project-list li {
-    margin-bottom: 14px;
-    padding-left: 5px;
-    color: var(--space-muted);
-}
-
-.project-list li:last-child {
-    margin-bottom: 0;
-}
-
-.disclaimer {
-    max-width: 850px;
-    margin: 30px auto 0;
-    font-size: 0.9rem;
-}
-
-/* 13. Pie de página */
-.site-footer {
-    padding: 35px 0;
-    background: #080c16;
-    border-top: 1px solid var(--space-border);
-}
-
-.footer-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.site-footer p {
-    margin-bottom: 0;
-}
-
-.back-top {
-    white-space: nowrap;
-}
-
-/* FRANCISCO JAVIER: estilos específicos para juegos.html.
-   Se mantienen en el CSS compartido para evitar estilos dentro del HTML. */
-.games-container {
-    max-width: 1140px;
-    margin-right: auto;
-    margin-left: auto;
-    padding-right: 20px;
-    padding-left: 20px;
-}
-
-.games-heading {
-    margin-right: auto;
-    margin-bottom: 40px;
-    margin-left: auto;
-}
-
-.games-heading h1 span {
-    color: var(--space-accent);
-}
-
-.games-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.game-card {
-    display: flex;
-    flex: 1 1 340px;
-    flex-direction: column;
-    justify-content: space-between;
-    max-width: 450px;
-    height: 100%;
-    text-align: center;
-}
-
-.game-card h3 {
-    margin-bottom: 15px;
-}
-
-.game-wrapper {
-    position: relative;
-    width: 100%;
-    /* Proporción 16:9 responsive para que el juego se adapte a la tarjeta. */
-    padding-top: 56.25%;
-    margin-top: 20px;
-    background: #050914;
-    border: 1px solid var(--space-border);
-    border-radius: 0.75rem;
-    overflow: hidden;
-}
-
-.game-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-.game-actions {
-    margin-top: 20px;
-}
-
-.game-link {
-    display: block;
-    text-decoration: none;
-}
-
-/* HUGO EXPÓSITO:
-   comprobar el contraste, el menú móvil y los reproductores. */
-
-/* RICARDO LERMA:
-   comprobar el canvas, las tarjetas y que no haya scroll horizontal. */
-
-/* 14. Adaptación a móviles */
-@media (max-width: 768px) {
-    .site-header .navbar {
-        min-height: 70px;
-    }
-
-    .hero {
-        min-height: 450px;
-        padding: 65px 0;
-        background-position: center;
-    }
-
-    .hero-caption {
-        margin-top: 35px;
-    }
-
-    .section-space,
-    .character-section .section-space {
-        padding-top: 65px;
-        padding-bottom: 65px;
-    }
-
-    .section-heading {
-        margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
-    .character-panel,
-    .map-panel,
-    .media-card {
-        padding: 20px;
-    }
-
-    .map-heading {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .footer-content {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .site-logo {
-        width: 120px;
-        height: 42px;
-    }
-}
-
-/* 15. Respetar la preferencia de movimiento reducido */
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    *,
-    *::before,
-    *::after {
-/* FRANCISCO JAVIER: estilos generales, diseño responsive y contraste.
-   Mantener un diseño moderno, minimalista y accesible. */
-
-/* 1. Colores */
-:root {
-    --space-bg: #0b1020;
-    --space-panel: #151c2c;
-    --space-text: #ffffff;
-    --space-muted: #d1d5db;
-    --space-accent: #60a5fa;
-    --space-border: #394760;
-}
-
-/* 2. Configuración general */
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 80px;
-}
-
-body {
-    margin: 0;
-    background: var(--space-bg);
-    color: var(--space-text);
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-.container {
-    max-width: 1140px;
-}
-
-/* 3. Textos */
 h1,
 h2,
 h3 {
@@ -699,7 +55,6 @@ p {
     color: var(--space-muted);
 }
 
-/* 4. Accesibilidad */
 a {
     color: #ffe08a;
 }
@@ -712,21 +67,7 @@ select:focus-visible {
     outline-offset: 3px;
 }
 
-.skip-link {
-    position: absolute;
-    top: -100px;
-    left: 10px;
-    z-index: 1000;
-    padding: 12px;
-    background: white;
-    color: black;
-}
-
-.skip-link:focus {
-    top: 10px;
-}
-
-/* 5. Cabecera y navegación */
+/* 2. Cabecera */
 .site-header {
     position: relative;
     z-index: 10;
@@ -736,8 +77,7 @@ select:focus-visible {
 
 .site-header .navbar {
     min-height: 82px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: 14px 0;
 }
 
 .navbar-brand {
@@ -766,7 +106,6 @@ select:focus-visible {
     background: #f5f7fb;
 }
 
-/* FRANCISCO JAVIER: tamaño del logo */
 .brand-image {
     display: block;
     width: 120px;
@@ -774,7 +113,6 @@ select:focus-visible {
     object-fit: contain;
 }
 
-/* Imagen del logo: cambia la ruta cuando añadas tu archivo */
 .site-logo {
     display: block;
     width: 145px;
@@ -782,24 +120,16 @@ select:focus-visible {
     object-fit: contain;
 }
 
-/* 6. Portada principal con imagen de fondo */
+/* 3. Portada */
 .hero {
     display: flex;
     align-items: center;
     min-height: 580px;
     padding: 90px 0;
     background-color: #080d19;
-
-    /* Sustituye esta ruta por la imagen que vayas a utilizar.
-       La imagen se adapta al tamaño de la portada. */
     background-image:
-        linear-gradient(
-            90deg,
-            rgba(5, 8, 18, 0.92),
-            rgba(5, 8, 18, 0.55)
-        ),
+        linear-gradient(90deg, rgba(5, 8, 18, 0.92), rgba(5, 8, 18, 0.55)),
         url("../assets/images/hero-star-wars.jpg");
-
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -841,11 +171,15 @@ select:focus-visible {
     margin-top: 30px;
 }
 
-.btn-gold {
+.btn-gold,
+.btn-outline-gold {
     padding: 12px 22px;
-    background: #f5c451;
     border: 1px solid #f5c451;
     border-radius: 8px;
+}
+
+.btn-gold {
+    background: #f5c451;
     color: #111827;
     font-weight: 700;
 }
@@ -856,9 +190,6 @@ select:focus-visible {
 }
 
 .btn-outline-gold {
-    padding: 12px 22px;
-    border: 1px solid #f5c451;
-    border-radius: 8px;
     color: #ffe08a;
 }
 
@@ -883,10 +214,9 @@ select:focus-visible {
     background: var(--space-accent);
 }
 
-/* 7. Separación de las secciones */
+/* 4. Secciones */
 .section-space {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 
 .section-heading {
@@ -895,7 +225,7 @@ select:focus-visible {
     text-align: center;
 }
 
-.section-heading > p:last-child {
+.section-heading>p:last-child {
     max-width: 650px;
     margin: 0 auto;
 }
@@ -904,27 +234,25 @@ select:focus-visible {
     border-bottom: 1px solid #273249;
 }
 
-.character-section {
-    background: #101625;
-    border-top: 1px solid #273249;
-    border-bottom: 1px solid #273249;
-}
-
-.character-section .section-space {
-    padding-top: 110px;
-    padding-bottom: 110px;
-}
-
+.character-section,
 .accessibility-section {
     background: #101625;
     border-top: 1px solid #273249;
 }
 
-/* 8. Tarjetas informativas
-   Mantener el estilo de las tarjetas anterior. */
+.character-section {
+    border-bottom: 1px solid #273249;
+}
+
+.character-section .section-space {
+    padding: 110px 0;
+}
+
+/* 5. Tarjetas */
 .info-card,
-.character-card {
-    padding: 1.25rem;
+.character-card,
+.media-card,
+.map-panel {
     background: var(--space-panel);
     border: 1px solid var(--space-border);
     border-radius: 1rem;
@@ -936,7 +264,8 @@ select:focus-visible {
     transition: border-color 0.2s;
 }
 
-.info-card:hover {
+.info-card:hover,
+.character-card:hover {
     border-color: var(--space-accent);
 }
 
@@ -962,7 +291,7 @@ select:focus-visible {
     margin-bottom: 0;
 }
 
-/* 9. Personajes de React */
+/* 6. Personajes */
 .character-panel {
     padding: 30px;
     background: #0b1020;
@@ -978,7 +307,7 @@ select:focus-visible {
 #character-app select {
     padding: 10px;
     color: #111827;
-    background: #ffffff;
+    background: #fff;
     border: 1px solid #667085;
     border-radius: 7px;
 }
@@ -994,13 +323,8 @@ select:focus-visible {
     transition: border-color 0.2s;
 }
 
-.character-card:hover {
-    border-color: var(--space-accent);
-}
-
 .character-card h3 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 .character-image {
@@ -1018,13 +342,10 @@ select:focus-visible {
     overflow-wrap: anywhere;
 }
 
-/* 10. Vídeo y audio */
+/* 7. Vídeo y audio */
 .media-card {
     height: 100%;
     padding: 30px;
-    background: var(--space-panel);
-    border: 1px solid var(--space-border);
-    border-radius: 1rem;
 }
 
 .media-icon {
@@ -1051,12 +372,9 @@ select:focus-visible {
     text-align: center;
 }
 
-/* 11. Mapa estelar */
+/* 8. Mapa */
 .map-panel {
     padding: 30px;
-    background: var(--space-panel);
-    border: 1px solid var(--space-border);
-    border-radius: 1rem;
 }
 
 .map-heading {
@@ -1081,11 +399,10 @@ select:focus-visible {
 }
 
 #canvasDescription {
-    margin-top: 20px;
-    margin-bottom: 0;
+    margin: 20px 0 0;
 }
 
-/* 12. Accesibilidad y licencias */
+/* 9. Accesibilidad */
 .project-list {
     max-width: 850px;
     margin: 0 auto;
@@ -1111,7 +428,7 @@ select:focus-visible {
     font-size: 0.9rem;
 }
 
-/* 13. Pie de página */
+/* 10. Pie de página */
 .site-footer {
     padding: 35px 0;
     background: #080c16;
@@ -1133,21 +450,26 @@ select:focus-visible {
     white-space: nowrap;
 }
 
-/* 14. Sección de juegos con imágenes de Internet */
+/* 11. Juegos */
 .games-container {
-    min-height: 70vh;
-    padding-top: 90px;
-    padding-bottom: 100px;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 90px 20px 100px;
 }
 
 .games-heading {
-    margin-bottom: 50px;
+    margin: 0 auto 40px;
+}
+
+.games-heading h1 span {
+    color: var(--space-accent);
 }
 
 .games-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 30px;
+    margin-top: 40px;
 }
 
 .game-card {
@@ -1167,7 +489,6 @@ select:focus-visible {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* La imagen completa es un enlace al juego */
 .game-image-link {
     display: block;
     overflow: hidden;
@@ -1197,7 +518,6 @@ select:focus-visible {
 .game-card h2,
 .game-card h3 {
     margin-bottom: 15px;
-    color: var(--space-text);
     font-size: 1.35rem;
 }
 
@@ -1238,92 +558,198 @@ select:focus-visible {
     outline-offset: 4px;
 }
 
-/* HUGO EXPÓSITO:
-   comprobar el contraste, el menú móvil y los reproductores. */
+/* 12. Carrusel de tráileres */
 
-/* RICARDO LERMA:
-   comprobar el canvas, las tarjetas y que no haya scroll horizontal. */
+/* CARRUSEL DE TRAILERES */
 
-/* 15. Adaptación a móviles */
+.trailer-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #0b1020;
+}
+
+.trailer-section>.container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 70px 0 0;
+}
+
+.trailer-section .section-heading {
+    max-width: 720px;
+    margin: 0 auto 45px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.trailer-carousel {
+    width: 100%;
+    margin: 0;
+    background: #050914;
+}
+
+/* Todas las diapositivas tienen exactamente el mismo tamaño */
+.trailer-carousel .carousel-inner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.trailer-carousel .carousel-item {
+    width: 100%;
+    height: 700px;
+    transition: transform 0.8s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.trailer-slide {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    padding: 60px 12%;
+    background-color: #050914;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.trailer-slide-1 {
+    background-image:
+        linear-gradient(90deg, rgba(5, 8, 18, 0.8), rgba(5, 8, 18, 0.2)),
+        url("https://lumiere-a.akamaihd.net/v1/images/star-wars-ahsoka-season-2-sw-hero-desktop_6964709a.jpeg?region=0,0,2048,878&width=1536");
+}
+
+.trailer-slide-2 {
+    background-image:
+        linear-gradient(90deg, rgba(5, 8, 18, 0.8), rgba(5, 8, 18, 0.2)),
+        url("https://lumiere-a.akamaihd.net/v1/images/star-wars-galactic-racer-launch-sw-hero-desktop_6a68505f.jpeg?region=0,0,2048,878&width=1536");
+}
+
+.trailer-slide-3 {
+    background-image:
+        linear-gradient(90deg, rgba(5, 8, 18, 0.8), rgba(5, 8, 18, 0.2)),
+        url("https://api.primusgaming.com/images/banner-top-cat-dk-v2.jpg");
+}
+
+.trailer-content {
+    max-width: 650px;
+}
+
+.trailer-content h3 {
+    margin: 15px 0;
+    color: #fff;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+}
+
+.trailer-content p:not(.eyebrow) {
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.trailer-button {
+    margin-top: 18px;
+    padding: 12px 24px;
+    font-weight: 700;
+}
+
+.trailer-button:hover {
+    background: #ffe08a;
+}
+
+.trailer-carousel .carousel-indicators {
+    z-index: 5;
+    margin-bottom: 22px;
+}
+
+.trailer-carousel .carousel-control-prev,
+.trailer-carousel .carousel-control-next {
+    z-index: 5;
+    width: 8%;
+}
+
+/* Ventana del vídeo */
+.trailer-modal-content {
+    color: #fff;
+    background: #101625;
+    border: 1px solid #394760;
+}
+
+.trailer-modal-content .modal-header {
+    border-bottom: 1px solid #394760;
+}
+
+.trailer-video {
+    display: block;
+    width: 100%;
+    max-height: 75vh;
+    background: #000;
+}
+
+.youtube-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.youtube-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Tablet y móvil */
 @media (max-width: 768px) {
-    .site-header .navbar {
-        min-height: 70px;
+    .trailer-section>.container {
+        padding-top: 60px;
     }
 
-    .hero {
-        min-height: 450px;
-        padding: 65px 0;
-        background-position: center;
+    .trailer-carousel .carousel-item,
+    .trailer-slide {
+        height: 500px;
     }
 
-    .hero-caption {
-        margin-top: 35px;
+    .trailer-slide {
+        padding: 45px 12%;
     }
 
-    .section-space,
-    .character-section .section-space {
-        padding-top: 65px;
-        padding-bottom: 65px;
-    }
-
-    .section-heading {
-        margin-bottom: 35px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
-    .character-panel,
-    .map-panel,
-    .media-card {
-        padding: 20px;
-    }
-
-    .map-heading {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .footer-content {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .site-logo {
-        width: 120px;
-        height: 42px;
-    }
-
-    .games-container {
-        padding-top: 65px;
-        padding-bottom: 65px;
-    }
-
-    .games-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .game-image {
-        height: 230px;
+    .trailer-content h3 {
+        font-size: 2.2rem;
     }
 }
 
-/* Adaptación a tabletas */
-@media (min-width: 769px) and (max-width: 1000px) {
-    .games-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 24px;
+@media (max-width: 480px) {
+
+    .trailer-carousel .carousel-item,
+    .trailer-slide {
+        height: 430px;
+    }
+
+    .trailer-slide {
+        padding: 35px 45px;
+    }
+
+    .trailer-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .trailer-content p:not(.eyebrow) {
+        font-size: 1rem;
     }
 }
 
-/* 16. Respetar la preferencia de movimiento reducido */
+
+.trailer-content p:not(.eyebrow) {
+    font-size: 1rem;
+}
+
+/* 14. Respetar movimiento reducido */
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -1337,7 +763,48 @@ select:focus-visible {
     }
 }
 
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
-    }
+
+.skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+.skip-link:focus {
+    top: 10px;
+    left: 10px;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 12px;
+    overflow: visible;
+    clip-path: none;
+    background: white;
+    color: black;
+    z-index: 1000;
+}
+
+/* Mantener fija la altura del carrusel */
+#trailerCarousel .carousel-inner {
+    height: 700px;
+    overflow: hidden;
+}
+
+/* Todas las diapositivas ocupan el mismo espacio */
+#trailerCarousel .carousel-item {
+    height: 700px;
+}
+
+/* Fondo de cada diapositiva */
+#trailerCarousel .trailer-slide {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
 }
