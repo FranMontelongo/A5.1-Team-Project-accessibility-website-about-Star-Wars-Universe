@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minijuegos de Star Wars para jugar directamente desde la web.">
+  <title>Juegos de Star Wars | Galaxia Star Wars</title>
+
+  <!-- Bootstrap: estilos y comportamiento del menú móvil, igual que en index.html. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- FRANCISCO JAVIER: estilos compartidos del proyecto y estilos específicos de juegos. -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <!-- FRANCISCO JAVIER: cabecera compartida con index.html -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg container" aria-label="Navegación principal">
+
+      <a class="navbar-brand brand-logo" href="index.html#inicio" aria-label="Galaxia Star Wars, inicio">
+        <!-- Se utiliza el mismo logo que en index.html. -->
+        <img class="brand-image" src="assets/images/logo-star-wars.png" alt="Galaxia Star Wars">
+      </a>
+
+      <!-- HUGO: comprueba el menú en móvil y asegúrate de que puede usarse con teclado. -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Abrir o cerrar navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#universo">Universo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#personajes">Personajes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#multimedia">Multimedia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#accesibilidad">Accesibilidad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="juegos.html" aria-current="page">Juegos</a>
+          </li>
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+
+  <main id="contenido" class="section-space games-container">
+
+    <div class="section-heading games-heading">
+      <p class="eyebrow">Galería de juegos</p>
+      <h1>Juegos de <span>Star Wars</span></h1>
+      <p>Descubre los juegos de la galaxia. Selecciona una imagen para ver cada juego en su página externa.</p>
+    </div>
+
+    <!-- Rejilla con las tarjetas centradas -->
+    <div class="games-grid">
+
+      <!-- JUEGO 1: Star Wars Galactic Battle -->
+      <article class="media-card game-card">
+        <div>
+          <h3>Star Wars: Galactic Battle</h3>
+          <p>Juego arcade de acción espacial. Pilotas tu nave enfrentándote a cazas enemigos.</p>
+
+          <!-- FRANCISCO JAVIER: sustituye la imagen por la captura o portada que quieras usar. -->
+          <a class="game-image-link"
+            href="https://alecsciandra.itch.io/star-wars-galactic-battle"
+            target="_blank" rel="noopener"
+            aria-label="Ver Star Wars Galactic Battle en itch.io">
+            <img class="game-image"
+              src="https://img.itch.zone/aW1nLzI5MTYzMTg3LnBuZw==/315x250%23c/mWch6T.png"
+              alt="Imagen de Star Wars Galactic Battle">
+          </a>
+        </div>
+
+        <div class="game-actions">
+          <a href="https://alecsciandra.itch.io/star-wars-galactic-battle"
+            target="_blank" rel="noopener"
+            class="btn-outline-gold game-link">
+            Ver en itch.io (Página externa)
+          </a>
+        </div>
+      </article>
+
+      <!-- JUEGO 2: SW Backgammon -->
+      <article class="media-card game-card">
+        <div>
+          <h3>Star Wars: Backgammon</h3>
+          <p>Versión temática del clásico juego de mesa Backgammon en la galaxia de Star Wars.</p>
+
+          <!-- FRANCISCO JAVIER: sustituye la imagen por la captura o portada que quieras usar. -->
+          <a class="game-image-link"
+            href="https://sekadd.itch.io/sw-backgammon"
+            target="_blank" rel="noopener"
+            aria-label="Ver Star Wars Backgammon en itch.io">
+            <img class="game-image"
+              src="https://img.itch.zone/aW1hZ2UvMjg4NDU0LzE0MDY3MjQucG5n/315x250%23c/YuIj8f.png"
+              alt="Imagen de Star Wars Backgammon">
+          </a>
+        </div>
+
+        <div class="game-actions">
+          <a href="https://sekadd.itch.io/sw-backgammon"
+            target="_blank" rel="noopener"
+            class="btn-outline-gold game-link">
+            Ver en itch.io (Página externa)
+          </a>
+        </div>
+      </article>
+
+      <!-- JUEGO 3: Star Wars Blast 'Em -->
+      <article class="media-card game-card">
+        <div>
+          <h3>Star Wars: Blast 'Em</h3>
+          <p>Minijuego de disparos frenético para poner a prueba tus reflejos destruyendo objetivos.</p>
+
+          <!-- FRANCISCO JAVIER: sustituye la imagen por la captura o portada que quieras usar. -->
+          <a class="game-image-link"
+            href="https://avrggy.itch.io/star-wars-blast-em"
+            target="_blank" rel="noopener"
+            aria-label="Ver Star Wars Blast 'Em en itch.io">
+            <img class="game-image"
+              src="https://img.itch.zone/aW1nLzMxMDY5MTcxLnBuZw==/315x250%23c/IMNfL%2F.png"
+              alt="Imagen de Star Wars Blast Em">
+          </a>
+        </div>
+
+        <div class="game-actions">
+          <a href="https://avrggy.itch.io/star-wars-blast-em"
+            target="_blank" rel="noopener"
+            class="btn-outline-gold game-link">
+            Ver en itch.io (Página externa)
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- FRANCISCO JAVIER: pie de página compartido con index.html -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Proyecto de clase — Francisco Javier, Hugo Expósito y Ricardo Lerma.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap: comportamiento del menú móvil. -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
