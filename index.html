@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="es">
 
@@ -7,12 +8,7 @@
   <meta name="description" content="Proyecto educativo accesible sobre el universo Star Wars.">
   <title>Galaxia Star Wars | Proyecto DAW</title>
 
-  <!-- FRANCISCO JAVIER: revisa que ambas librerías se cargan y documenta por qué usamos Bootstrap y Tailwind.
-       Nota: Bootstrap y Tailwind pueden tener conflictos de estilos; prueba la página y limita clases cuando sea necesario. -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Se elimina Tailwind porque el diseño utiliza CSS propio y Bootstrap. -->
-
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -20,35 +16,26 @@
 
   <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
 
-  <!-- FRANCISCO JAVIER: cabecera y logo del proyecto -->
   <header class="site-header">
     <nav class="navbar navbar-expand-lg container" aria-label="Navegación principal">
 
       <a class="navbar-brand brand-logo" href="#inicio" aria-label="Galaxia Star Wars, inicio">
-        <!-- Sustituye esta ruta por la imagen de tu logo. -->
         <img class="brand-image" src="assets/images/logo-star-wars.png" alt="Galaxia Star Wars">
       </a>
 
-      <!-- HUGO: comprueba el menú en móvil y asegúrate de que puede usarse con teclado. -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
-        aria-controls="mainNav" aria-expanded="false" aria-label="Abrir o cerrar navegación">
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false"
+              aria-label="Abrir o cerrar navegación">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="mainNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#universo">Universo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#personajes">Personajes</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#multimedia">Multimedia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#accesibilidad">Accesibilidad</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#universo">Universo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#personajes">Personajes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#carrusel">Carrusel</a></li>
+          <li class="nav-item"><a class="nav-link" href="./juegos.html">Juegos</a></li>
         </ul>
       </div>
 
@@ -57,11 +44,10 @@
 
   <main id="contenido">
 
-    <!-- FRANCISCO JAVIER: portada principal -->
+    <!-- PORTADA -->
     <section id="inicio" class="hero">
       <div class="container hero-content">
         <p class="eyebrow">Una galaxia para todos</p>
-
         <h1>Explora el <span>universo</span> Star Wars</h1>
 
         <p class="hero-description">
@@ -70,10 +56,7 @@
         </p>
 
         <div class="hero-buttons">
-          <a class="btn btn-gold" href="#personajes">
-            Conocer personajes
-          </a>
-
+          <a class="btn btn-gold" href="#personajes">Conocer personajes</a>
           <button class="btn btn-outline-gold" id="readPageButton" type="button">
             Leer página en voz alta
           </button>
@@ -86,23 +69,17 @@
           EXPLORA · DESCUBRE · APRENDE
         </div>
       </div>
-    </section>  
+    </section>
 
-    <!-- RICARDO LERMA: información sobre el universo -->
+    <!-- UNIVERSO -->
     <section id="universo" class="container section-space">
 
       <div class="section-heading">
         <p class="eyebrow">Una galaxia muy, muy lejana</p>
         <h2>El universo</h2>
-        <p>
-          Descubre los lugares, las facciones y los acontecimientos
-          que forman parte de la saga.
-        </p>
+        <p>Descubre los lugares, las facciones y los acontecimientos de la saga.</p>
       </div>
 
-      <!-- RICARDO LERMA: crea al menos tres tarjetas de planetas o facciones.
-           Usa encabezados ordenados, texto breve, imágenes optimizadas
-           y texto alternativo significativo. -->
       <div class="row g-4">
 
         <div class="col-md-4">
@@ -119,7 +96,7 @@
             <span class="card-number">02 / FACCIONES</span>
             <div class="card-symbol" aria-hidden="true">⚔</div>
             <h3>Facción pendiente</h3>
-            <p>Explica quiénes la forman y qué papel tiene en la historia.</p>
+            <p>Explica quiénes la forman y qué papel tienen en la historia.</p>
           </article>
         </div>
 
@@ -128,82 +105,35 @@
             <span class="card-number">03 / CRONOLOGÍA</span>
             <div class="card-symbol" aria-hidden="true">◷</div>
             <h3>Época pendiente</h3>
-            <p>Resume una época de la cronología sin saturar la página de texto.</p>
+            <p>Resume una época de la cronología.</p>
           </article>
         </div>
 
       </div>
     </section>
 
-    <!-- FRANCISCO JAVIER: listado interactivo desarrollado con React -->
+    <!-- PERSONAJES DE REACT -->
     <section id="personajes" class="character-section">
       <div class="container section-space">
 
         <div class="section-heading">
           <p class="eyebrow">Héroes, villanos y leyendas</p>
           <h2>Explora los personajes</h2>
-          <p>
-            Busca un personaje o utiliza los filtros para descubrir la galaxia.
-          </p>
+          <p>Busca un personaje o utiliza los filtros para descubrir la galaxia.</p>
         </div>
 
-        <!-- FRANCISCO JAVIER: este componente React se monta desde js/react-app.js.
-             Completa la lista, añade estados y comprueba que el resultado
-             se anuncia con aria-live. -->
         <div class="character-panel">
           <div id="character-app">
-            <p>El listado interactivo se cargará aquí. Si no carga, revisa la consola del navegador.</p>
+            <p>El listado interactivo se cargará aquí.</p>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- FRANCISCO JAVIER: sección multimedia -->
-    <section id="multimedia" class="container section-space">
-
-      <div class="section-heading">
-        <p class="eyebrow">Imagen y sonido</p>
-        <h2>Explora la multimedia</h2>
-      </div>
-
-      <div class="row g-4">
-
-        <div class="col-lg-6">
-          <article class="media-card">
-            <div class="media-icon" aria-hidden="true">▶</div>
-            <h3>Vídeo</h3>
-            <p>
-              Vídeo pendiente de añadir. Cuando esté disponible,
-              incluye subtítulos y una transcripción accesible.
-            </p>
-            <div class="media-placeholder">
-              VÍDEO PENDIENTE DE AÑADIR
-            </div>
-          </article>
-        </div>
-
-        <div class="col-lg-6">
-          <article class="media-card">
-            <div class="media-icon" aria-hidden="true">♫</div>
-            <h3>Sonido</h3>
-            <p>
-              Audio pendiente de añadir. Incluye una descripción
-              o transcripción cuando esté disponible.
-            </p>
-            <div class="media-placeholder">
-              AUDIO PENDIENTE DE AÑADIR
-            </div>
-          </article>
-        </div>
-
-      </div>
-
-      <!-- RICARDO LERMA: dibuja en el canvas con JavaScript.
-           No pongas información esencial solo en el dibujo:
-           incluye también una descripción textual equivalente
-           y un nombre accesible. -->
-      <div class="map-panel mt-5">
+    <!-- MAPA ESTELAR -->
+    <section class="container section-space">
+      <div class="map-panel">
 
         <div class="map-heading">
           <div>
@@ -217,51 +147,148 @@
         </div>
 
         <canvas id="starCanvas" width="800" height="300" role="img"
-          aria-label="Mapa estelar decorativo. La descripción textual se encuentra a continuación.">
-          Mapa estelar: añade aquí una descripción textual de los planetas y conexiones que se mostrarán.
+                aria-label="Mapa estelar de planetas y conexiones.">
+          Mapa estelar de Star Wars.
         </canvas>
 
         <p id="canvasDescription" class="map-description">
-          Descripción del mapa pendiente: enumera los planetas representados y sus conexiones.
+          Mapa con los planetas Tatooine, Naboo y Hoth conectados.
         </p>
 
       </div>
     </section>
 
-    <!-- RICARDO LERMA: accesibilidad, licencias y resultados de las pruebas -->
-    <section id="accesibilidad" class="accessibility-section">
-      <div class="container section-space">
+    <!-- CARRUSEL DE TRÁILERES -->
+    <section id="carrusel" class="trailer-section">
 
-        <div class="section-heading">
-          <p class="eyebrow">Diseño responsable</p>
-          <h2>Accesibilidad y licencias</h2>
-          <p>
-            El objetivo es que la web pueda utilizarse con diferentes
-            dispositivos y tecnologías de asistencia.
-          </p>
+      <div class="section-heading">
+        <p class="eyebrow">Explora la galaxia</p>
+        <h2>Tráileres de Star Wars</h2>
+        <p>Descubre las películas y series de la saga.</p>
+      </div>
+
+      <div id="trailerCarousel" class="carousel slide trailer-carousel"
+           data-bs-ride="false">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#trailerCarousel"
+                  data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Primer tráiler"></button>
+
+          <button type="button" data-bs-target="#trailerCarousel"
+                  data-bs-slide-to="1" aria-label="Segundo tráiler"></button>
+
+          <button type="button" data-bs-target="#trailerCarousel"
+                  data-bs-slide-to="2" aria-label="Tercer tráiler"></button>
         </div>
 
-        <!-- RICARDO LERMA: después de hacer pruebas, resume los resultados iniciales y finales.
-             No afirmes que el sitio está certificado si no existe una certificación real. -->
-        <ul class="project-list">
-          <li>Objetivo: seguir las pautas WCAG 2.2 nivel AA y publicar una declaración de accesibilidad honesta.</li>
-          <li>Declaración de accesibilidad: pendiente de completar tras las pruebas.</li>
-          <li>Licencias de imágenes, vídeo, audio y tipografías: pendiente de documentar.</li>
-          <li>Informe automático antes de corregir: pendiente.</li>
-          <li>Informe automático después de corregir: pendiente.</li>
-        </ul>
+        <div class="carousel-inner">
 
-        <p class="disclaimer">
-          Proyecto educativo no oficial. Star Wars y sus elementos pertenecen
-          a sus respectivos titulares. No implica afiliación ni respaldo oficial.
-        </p>
+          <!-- TRÁILER 1 -->
+          <div class="carousel-item active">
+            <div class="trailer-slide trailer-slide-1">
+              <div class="trailer-content">
+                <h3>Ahsoka</h3>
+                <p>No te pierdas la segunda temporada de Ahsoka.</p>
+
+                <!-- VÍDEO AQUÍ: cambia el enlace por el ID de tu vídeo de YouTube -->
+                <button class="btn btn-warning trailer-button"
+                        type="button"
+                        data-video="https://www.youtube.com/watch?v=Fdar7gTQnog"
+                        data-title="Ahsoka">
+                  Ver tráiler
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRÁILER 2 -->
+          <div class="carousel-item">
+            <div class="trailer-slide trailer-slide-2">
+              <div class="trailer-content">
+                <h3>Galactic Riders</h3>
+                <p>Sumerjete en carreras de vainas espaciales.</p>
+
+                <!-- VÍDEO AQUÍ: pega el enlace del tráiler de YouTube -->
+                <button class="btn btn-warning trailer-button"
+                        type="button"
+                        data-video="https://youtu.be/pR-V3j-sc7s"
+                        data-title="Galactic Riders">
+                  Ver tráiler
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRÁILER 3 -->
+          <div class="carousel-item">
+            <div class="trailer-slide trailer-slide-3">
+              <div class="trailer-content">
+                <h3>Mandalorain And grogu</h3>
+                <p>Vive una epica aventura de nuestros guerros favoritos.</p>
+
+                <!-- VÍDEO AQUÍ: pega el enlace del tráiler de YouTube -->
+                <button class="btn btn-warning trailer-button"
+                        type="button"
+                        data-video="https://youtu.be/IHWlvwu8t1w"
+                        data-title="Mandalorian and grogu">
+                  Ver tráiler
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button"
+                data-bs-target="#trailerCarousel" data-bs-slide="prev"
+                aria-label="Tráiler anterior">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button"
+                data-bs-target="#trailerCarousel" data-bs-slide="next"
+                aria-label="Siguiente tráiler">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
 
       </div>
     </section>
+
+    <!-- MODAL ÚNICO PARA TODOS LOS TRÁILERES -->
+    <div class="modal fade" id="trailerModal" tabindex="-1"
+         aria-labelledby="trailerModalTitle" aria-hidden="true">
+
+      <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content trailer-modal-content">
+
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="trailerModalTitle">
+              Tráiler de Star Wars
+            </h2>
+
+            <button type="button" class="btn-close btn-close-white"
+                    data-bs-dismiss="modal" aria-label="Cerrar tráiler"></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="ratio ratio-16x9">
+              <iframe id="trailerVideo"
+                      src=""
+                      title="Reproductor del tráiler de Star Wars"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen></iframe>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
 
   </main>
 
-  <!-- FRANCISCO JAVIER: pie de página -->
+  <!-- PIE DE PÁGINA -->
   <footer class="site-footer">
     <div class="container footer-content">
       <p>Proyecto de clase — Francisco Javier, Hugo Expósito y Ricardo Lerma.</p>
@@ -269,20 +296,20 @@
     </div>
   </footer>
 
-  <!-- Bootstrap: comportamiento del menú móvil. -->
+  <!-- Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- jQuery se usa en js/app.js para un elemento interactivo adicional. -->
+  <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-  <!-- React para el buscador/listado de personajes. -->
+  <!-- React -->
   <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+  <!-- JavaScript de la página -->
   <script src="js/app.js"></script>
   <script type="text/babel" src="js/react-app.js"></script>
 
 </body>
-
 </html>
