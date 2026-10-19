@@ -12,7 +12,7 @@
 ### Hugo Expósito — multimedia y lectura en voz alta
 - Preparar/añadir imagen, vídeo, audio y subtítulos en las carpetas `assets/`.
 - Revisar permisos y registrar las licencias/fuentes de cada archivo.
-- Completar la lectura en voz alta y la interacción jQuery en `js/app.js`.
+- Completar la lectura en voz alta y preparar los vídeos del carrusel multimedia.
 - Añadir transcripción del vídeo/audio, comprobar controles por teclado y no usar autoplay.
 - Hacer una revisión de accesibilidad centrada en multimedia y teclado.
 
@@ -26,7 +26,7 @@
 ## Archivos
 - `index.html`: estructura de página y espacios reservados.
 - `css/styles.css`: estilos base y responsive.
-- `js/app.js`: lectura en voz alta, canvas y ejemplo jQuery.
+- `js/app.js`: lectura en voz alta y dibujo del mapa estelar.
 - `js/react-app.js`: buscador/filtro React.
 - `docs/storyboard.md`: storyboard para completar.
 - `docs/figma.md`: guía del diseño.
@@ -34,7 +34,7 @@
 - `docs/presentation.md`: estructura de 10 diapositivas.
 
 ## Cómo probar
-Abre `index.html` en un navegador con conexión a internet. Las librerías se cargan desde CDN. Los archivos multimedia son marcadores de posición: crea las carpetas `assets/images`, `assets/video` y `assets/audio` y sustituye las rutas por archivos reales. Para evitar problemas de carga local, también puedes ejecutar un servidor local sencillo desde la carpeta del proyecto.
+Abre `index.html` en un navegador con conexión a internet. Las librerías se cargan desde CDN. Para personalizar el carrusel, añade las imágenes `video-slide-1.jpg`, `video-slide-2.jpg` y `video-slide-3.jpg` en `assets/images` y actualiza los enlaces de los botones. Añade los archivos multimedia en `assets/video` y `assets/audio`. Para evitar problemas de carga local, también puedes ejecutar un servidor local sencillo desde la carpeta del proyecto.
 
 ## Importante
 Esta es una base sin terminar, no una web final ni una certificación. No afirméis cumplimiento WCAG AA hasta probar y corregir. Un comprobador automático no detecta todos los problemas: combinadlo con revisión manual y teclado. Usad recursos con licencia adecuada y no presentéis el proyecto como oficial de Star Wars.

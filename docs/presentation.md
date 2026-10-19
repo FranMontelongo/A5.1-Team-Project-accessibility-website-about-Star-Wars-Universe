@@ -6,8 +6,8 @@
 4. Diseño Figma: escritorio, móvil y componentes.
 5. Storyboard y navegación.
 6. Estructura técnica: HTML, Bootstrap, Tailwind, CSS y JavaScript.
-7. Elementos interactivos: React, jQuery, lectura en voz alta y canvas.
-8. Multimedia: imágenes, vídeo, subtítulos, audio, transcripción y licencias.
+7. Elementos interactivos: React, lectura en voz alta, carrusel y canvas.
+8. Multimedia: imágenes de fondo del carrusel, enlaces, audio, transcripción y licencias.
 9. Auditoría: errores iniciales, correcciones y resultados finales.
 10. Conclusiones, declaración de accesibilidad y tareas pendientes.
 
