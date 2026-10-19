@@ -44,11 +44,9 @@
             <a class="nav-link" href="#personajes">Personajes</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#multimedia">Multimedia</a>
+            <a class="nav-link" href="naves.html">Naves y vehículos</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#accesibilidad">Accesibilidad</a>
-          </li>
+
         </ul>
       </div>
 
@@ -58,7 +56,8 @@
   <main id="contenido">
 
     <!-- FRANCISCO JAVIER: portada principal -->
-    <section id="inicio" class="hero">
+    <section id="inicio" class="hero"
+      style="background-image: url('https://images.unsplash.com/photo-1547700055-b61cacebece9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=NHwxM jA3fDA%3D');">
       <div class="container hero-content">
         <p class="eyebrow">Una galaxia para todos</p>
 
@@ -73,10 +72,11 @@
           <a class="btn btn-gold" href="#personajes">
             Conocer personajes
           </a>
-
           <button class="btn btn-outline-gold" id="readPageButton" type="button">
             Leer página en voz alta
           </button>
+
+          <p id="readStatus" class="visually-hidden" aria-live="polite"></p>
         </div>
 
         <p id="readStatus" class="visually-hidden" aria-live="polite"></p>
@@ -86,7 +86,7 @@
           EXPLORA · DESCUBRE · APRENDE
         </div>
       </div>
-    </section>  
+    </section>
 
     <!-- RICARDO LERMA: información sobre el universo -->
     <section id="universo" class="container section-space">
@@ -158,106 +158,37 @@
 
       </div>
     </section>
+    </div>
 
-    <!-- FRANCISCO JAVIER: sección multimedia -->
-    <section id="multimedia" class="container section-space">
-
-      <div class="section-heading">
-        <p class="eyebrow">Imagen y sonido</p>
-        <h2>Explora la multimedia</h2>
-      </div>
-
-      <div class="row g-4">
-
-        <div class="col-lg-6">
-          <article class="media-card">
-            <div class="media-icon" aria-hidden="true">▶</div>
-            <h3>Vídeo</h3>
-            <p>
-              Vídeo pendiente de añadir. Cuando esté disponible,
-              incluye subtítulos y una transcripción accesible.
-            </p>
-            <div class="media-placeholder">
-              VÍDEO PENDIENTE DE AÑADIR
-            </div>
-          </article>
-        </div>
-
-        <div class="col-lg-6">
-          <article class="media-card">
-            <div class="media-icon" aria-hidden="true">♫</div>
-            <h3>Sonido</h3>
-            <p>
-              Audio pendiente de añadir. Incluye una descripción
-              o transcripción cuando esté disponible.
-            </p>
-            <div class="media-placeholder">
-              AUDIO PENDIENTE DE AÑADIR
-            </div>
-          </article>
-        </div>
-
-      </div>
-
-      <!-- RICARDO LERMA: dibuja en el canvas con JavaScript.
+    <!-- RICARDO LERMA: dibuja en el canvas con JavaScript.
            No pongas información esencial solo en el dibujo:
            incluye también una descripción textual equivalente
            y un nombre accesible. -->
-      <div class="map-panel mt-5">
+    <div class="map-panel mt-5">
 
-        <div class="map-heading">
-          <div>
-            <p class="eyebrow">Navegación galáctica</p>
-            <h3>Mapa estelar interactivo</h3>
-          </div>
-
-          <button class="btn btn-outline-gold" id="redrawCanvas" type="button">
-            Redibujar mapa
-          </button>
+      <div class="map-heading">
+        <div>
+          <p class="eyebrow">Navegación galáctica</p>
+          <h3>Mapa estelar interactivo</h3>
         </div>
 
-        <canvas id="starCanvas" width="800" height="300" role="img"
-          aria-label="Mapa estelar decorativo. La descripción textual se encuentra a continuación.">
-          Mapa estelar: añade aquí una descripción textual de los planetas y conexiones que se mostrarán.
-        </canvas>
-
-        <p id="canvasDescription" class="map-description">
-          Descripción del mapa pendiente: enumera los planetas representados y sus conexiones.
-        </p>
-
+        <button class="btn btn-outline-gold" id="redrawCanvas" type="button">
+          Redibujar mapa
+        </button>
       </div>
+
+      <canvas id="starCanvas" width="800" height="300" role="img"
+        aria-label="Mapa estelar decorativo. La descripción textual se encuentra a continuación.">
+        Mapa estelar: añade aquí una descripción textual de los planetas y conexiones que se mostrarán.
+      </canvas>
+
+      <p id="canvasDescription" class="map-description">
+        Descripción del mapa pendiente: enumera los planetas representados y sus conexiones.
+      </p>
+
+    </div>
     </section>
 
-    <!-- RICARDO LERMA: accesibilidad, licencias y resultados de las pruebas -->
-    <section id="accesibilidad" class="accessibility-section">
-      <div class="container section-space">
-
-        <div class="section-heading">
-          <p class="eyebrow">Diseño responsable</p>
-          <h2>Accesibilidad y licencias</h2>
-          <p>
-            El objetivo es que la web pueda utilizarse con diferentes
-            dispositivos y tecnologías de asistencia.
-          </p>
-        </div>
-
-        <!-- RICARDO LERMA: después de hacer pruebas, resume los resultados iniciales y finales.
-             No afirmes que el sitio está certificado si no existe una certificación real. -->
-        <ul class="project-list">
-          <li>Objetivo: seguir las pautas WCAG 2.2 nivel AA y publicar una declaración de accesibilidad honesta.</li>
-          <li>Declaración de accesibilidad: pendiente de completar tras las pruebas.</li>
-          <li>Licencias de imágenes, vídeo, audio y tipografías: pendiente de documentar.</li>
-          <li>Informe automático antes de corregir: pendiente.</li>
-          <li>Informe automático después de corregir: pendiente.</li>
-        </ul>
-
-        <p class="disclaimer">
-          Proyecto educativo no oficial. Star Wars y sus elementos pertenecen
-          a sus respectivos titulares. No implica afiliación ni respaldo oficial.
-        </p>
-
-      </div>
-    </section>
 
   </main>
 
